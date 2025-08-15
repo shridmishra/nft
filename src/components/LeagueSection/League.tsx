@@ -10,13 +10,14 @@ export default function League() {
   ];
 
   return (
-    <section className="w-full bg-navy py-16">
-      <h2 className="font-atomos text-3xl text-center text-textWhite mb-8">
+    <section className="w-full bg-background py-16">
+      <h2 className="font-atomos text-8xl text-center text-textWhite mb-8 tracking-widest">
         THE LEAGUE
       </h2>
 
+
       {/* Table container */}
-      <div className="mx-auto max-w-[1179.34px] rounded-[11px] border border-neonOrange bg-darkGreen">
+      <div className="mx-auto w-[1179px] h-[614px] rounded-xl border border-white bg-[#00120A]">
         {teams.map((team, i) => (
           <LeagueRow
             key={i}

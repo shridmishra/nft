@@ -3,9 +3,10 @@ import League from "@/components/LeagueSection/League";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-background">
       <Hero />
+      
       <League />
-    </>
+    </div>
   );
 }

@@ -5,9 +5,17 @@
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Atomos";
+  src: url("/fonts/Atomos-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-background: #000d18;
-  --color-navy: #010e13;
+  --color-hero: #00120a;
   --color-darkGreen: #001500;
   --color-neonOrange: #ff4d00;
   --color-solYellow: #ffd700;
@@ -18,7 +26,7 @@
   --font-voltec: "Voltec", sans-serif;
   --font-press-start: "Press Start 2P", cursive;
   --font-megaton: "Megaton", sans-serif;
-  --font-display: "Orbitron", sans-serif;
+  --font-orbitron: "Orbitron", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
@@ -34,5 +42,10 @@
 @layer utilities {
   .animate-scroll {
     animation: scroll 20s linear infinite;
+  }
+  
+  .outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1.5px white; /* Outline color & thickness */
   }
 }
