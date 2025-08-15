@@ -1,8 +1,10 @@
 import DualColorText from "../ui/DualColorText";
+import Grid from "../Grid";
+import SynthwaveGrid from "../Grid";
 import GameButton from './HeroButton';
 
 export default function Hero() {
-  return (<div className="px-[146px] py-[177px] bg-hero">
+  return (<div className="px-[146px] pt-44 pb-10 bg-hero">
      <section className="relative flex items-center justify-center bg-hero min-h-screen w-full overflow-hidden px-8 ">
       {/* === CORNER BRACKETS === */}
       {/* top-left */}
@@ -73,6 +75,7 @@ export default function Hero() {
        <GameButton text="Start game"/>
       </div>
     </section>
+    
   </div>
    
   );
