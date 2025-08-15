@@ -12,37 +12,46 @@ interface LeagueRowProps {
 export default function LeagueRow({ icon, name, score, sol, isLast }: LeagueRowProps) {
   return (
     <div
-      className={'flex items-center justify-between px-8 py-9 h-[144px] border-b-4 border-neonOrange mx-8'}
+      className={`
+        flex flex-col items-start gap-4 px-4 py-6 border-b-4 border-neonOrange mx-4
+        lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:py-9 lg:h-[144px] lg:gap-0 lg:mx-8
+      `}
     >
       {/* Logo + Name */}
-      <div className="flex items-center gap-6 min-w-[200px]">
+      <div className="flex items-center gap-4 min-w-0 lg:gap-6 lg:min-w-[200px]">
         <Image src={icon} alt={name} width={36} height={36} />
-        <span className="font-voltec text-white  text-3xl tracking-wide">
+        <span className="font-voltec text-white text-xl tracking-wide lg:text-3xl">
           {name}
         </span>
       </div>
 
       {/* Score + Skull */}
-      <div className="flex items-center gap-3 min-w-[80px] justify-center">
-        <span className="text-textWhite font-['Press_Start_2P'] text-lg">
+      <div className="flex items-center gap-2 justify-start lg:gap-3 lg:justify-center lg:min-w-[80px]">
+        <span className="text-textWhite font-['Press_Start_2P'] text-sm lg:text-lg">
           {score}
         </span>
-        <Image src="/icons/skull.svg" alt="Skull" width={40} height={40} />
+        <Image
+          src="/icons/skull.svg"
+          alt="Skull"
+          width={32}
+          height={32}
+          className="lg:w-10 lg:h-10"
+        />
       </div>
 
       {/* SOL column */}
-      <div className="flex items-center gap-2 min-w-[80px] justify-end">
+      <div className="flex items-center gap-1 justify-start lg:gap-2 lg:justify-end lg:min-w-[80px]">
         {sol !== undefined ? (
           <>
-            <span className="text-textWhite font-['Press_Start_2P'] text-lg">
+            <span className="text-textWhite font-['Press_Start_2P'] text-sm lg:text-lg">
               {sol}
             </span>
-            <span className="text-textWhite font-['Press_Start_2P'] text-lg">
+            <span className="text-textWhite font-['Press_Start_2P'] text-sm lg:text-lg">
               SOL
             </span>
           </>
         ) : (
-          <div className="w-[64px]" />
+          <div className="w-[40px] lg:w-[64px]" />
         )}
       </div>
     </div>

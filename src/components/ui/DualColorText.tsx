@@ -12,7 +12,7 @@ const DualColorText: React.FC<DualColorTextProps> = ({
   whiteFirst = true,
 }) => {
   return (
-    <span className=" text-xs font-orbitron">
+    <span className="  lg:text-xs  font-orbitron">
       <span
         className={whiteFirst ? "text-white" : "text-[#21E786]"}
       >
